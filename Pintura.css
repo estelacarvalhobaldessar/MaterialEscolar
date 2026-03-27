@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box1{
+    height: 250px;
+    width: 100%;
+    background-color: pink;
+}
+.ME{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 15px;
+}
+.caixaMenu{
+    height: 70px;
+    width: 90%;
+    background-color: rgba(172, 52, 92, 0.877);
+    margin-left: 5%;
+    margin-top: 100px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul li{
+    float: left;
+}
+ul li a{
+    display: block;
+    color: white; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul li a:hover {
+    background-color: rgba(172, 52, 92, 0.877);
+    height: 42px;
+  }
