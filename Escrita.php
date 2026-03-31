@@ -1,3 +1,6 @@
+<?php
+include_once 'conexao.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +16,9 @@
             <div class="caixaMenu">
                 <nav>
                     <ul>
-                        <li><a href="Escrita.html"><h2>Escrita</h2></a></li>
-                        <li><a href="MaterialEscolar.html"><h2>Material Escolar</h2></a></li>
-                        <li><a href="Pintura.html"><h2>Pintura</h2></a></li>
+                        <li><a href="Escrita.php"><h2>Escrita</h2></a></li>
+                        <li><a href="MaterialEscolar.php"><h2>Material Escolar</h2></a></li>
+                        <li><a href="Pintura.php"><h2>Pintura</h2></a></li>
                     </ul>
                 </nav>
             </div>
@@ -27,12 +30,27 @@
                 <h1 class="IE">ITENS DE ESCRITA</h1>
                 <div class="CaixaEscrita">
                     <table>
+<?php
+                    $sql = "SELECT EscritaID,Caneta,Cor FROM escrita;";
+                    $result = mysqli_query($conn, $sql);
+                    ?>
                         <tr>
                             <th>ID</th>
                             <th>Caneta</th>
                             <th>Cor</th>
                             <th>Ações</th>
-                          </tr>
+                        </tr>
+
+                        <?php
+                        while($row = mysqli_fetch_assoc($result)) {
+                            echo '<tr>
+                                        <th>'.$row["EscritaID"].'</th>
+                                        <th>'.$row["Caneta"].'</th>
+                                        <th>'.$row["Cor"].'</th>
+                                        <th>Ações</th>
+                                    </tr>';
+                        }
+                        ?>
                     </table>
                 </div>
             </div>

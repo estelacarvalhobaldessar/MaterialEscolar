@@ -42,13 +42,13 @@ ul li a:hover {
 }
 
 .box2{
-    height: 500px;
+    height: auto;
     width: 100%;
     background-color: pink;
     padding-top: 70px;
 }
 .ListaEscrita{
-    height: 300px;
+    height: auto;
     width: 90%;
     background-color: rgba(172, 52, 92, 0.877);
     margin-left: 5%;
@@ -60,7 +60,7 @@ ul li a:hover {
     text-align: center;
 }
 .CaixaEscrita{
-    height: 70px;
+    height: auto;
     width: 100%;
     background-color: rgba(143, 41, 75, 0.877);
     margin-top: 20px;
