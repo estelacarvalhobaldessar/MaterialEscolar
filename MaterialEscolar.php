@@ -31,7 +31,21 @@ include_once 'conexao.php';
                 <div class="CaixaME">
                     <table>
                         <?php
-                            $sql = "SELECT MaterialEscolarID,EscritaID,PinturaID,Mochila,Estojo,Garrafa FROM materialescolar;";
+                            $sql = "SELECT 
+                                materialescolar.MaterialEscolarID, 
+                                escrita.Caneta,
+                                escrita.Cor,
+                                pintura.Tinta,
+                                pintura.CorTinta,
+                                Mochila,
+                                Estojo,
+                                Garrafa 
+                                FROM materialescolar
+                                INNER JOIN escrita
+                                ON materialescolar.EscritaID = escrita.EscritaID
+                                INNER JOIN pintura
+                                ON materialescolar.PinturaID = pintura.PinturaID
+                                ;";
                             $result = mysqli_query($conn, $sql);
                         ?>
                         <tr>
@@ -41,16 +55,18 @@ include_once 'conexao.php';
                             <th>Mochila</th>
                             <th>Estojo</th>
                             <th>Garrafa</th>
+                            <th>Ações</th>
                           </tr>
                         <?php  
                             while($row = mysqli_fetch_assoc($result)){  
                             echo '<tr>
                                 <th>'.$row["MaterialEscolarID"].'</th>
-                                <th>'.$row["EscritaID"].'</th>
-                                <th>'.$row["PinturaID"].'</th>
+                                <th>'.$row["Caneta"].' - '.$row["Cor"].' - </th>
+                                <th>'.$row["Tinta"].' - '.$row["CorTinta"].'</th>
                                 <th>'.$row["Mochila"].'</th>
                                 <th>'.$row["Estojo"].'</th>
                                 <th>'.$row["Garrafa"].'</th>
+                                <th>Ações</th>
                             </tr>';
                             }
                           ?>
