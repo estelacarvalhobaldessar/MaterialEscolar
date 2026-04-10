@@ -66,7 +66,9 @@ include_once 'conexao.php';
                                 <th>'.$row["Mochila"].'</th>
                                 <th>'.$row["Estojo"].'</th>
                                 <th>'.$row["Garrafa"].'</th>
-                                <th>Ações</th>
+                                <th>
+                                    <a href="">Editar</a>
+                                    <a href="acaoExcluirME.php?id='.$row["MaterialEscolarID"].'">Excluir</a></th>
                             </tr>';
                             }
                           ?>

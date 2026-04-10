@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box1{
+    height: 250px;
+    width: 100%;
+    background-color: pink;
+}
+.ME{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+}
+.caixaMenu{
+    height: 70px;
+    width: 90%;
+    background-color: rgba(172, 52, 92, 0.877);
+    margin-left: 5%;
+    margin-top: 100px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul li{
+    float: left;
+}
+ul li a{
+    display: block;
+    color: white; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul li a:hover {
+    background-color: rgba(172, 52, 92, 0.877);
+    height: 42px;
+}
+
+.box2{
+    height: 500px;
+    width: 100%;
+    background-color: pink;
+    padding-top: 70px;
+}
+.ListaEscrita{
+    height: auto;
+    width: 90%;
+    background-color: rgba(172, 52, 92, 0.877);
+    margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
+}
+.CE{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+.cadastro{
+    height: 350px;
+    width: 90%;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.MC{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: black;
+}
+.MarcaCaneta{
+    height: 20px;
+    width: 30%;
+    margin-left: 20%;
+}
+input{
+    height: 20px;
+    width: 35%;
+    margin-left: 35%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
