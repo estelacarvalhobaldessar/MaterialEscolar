@@ -30,14 +30,14 @@ include_once 'conexao.php';
                 <h1 class="CE">CADASTRO ESCRITA</h1>                    
                 </div>
                 <div class="cadastro">
-                    <form action="./processaEscrita.php" method="post">
+                    <form action="./processaPintura.php" method="post">
                         <input type="hidden" name="id">
 
                         <h2 class="MC">Marca Tinta</h2>
-                        <input type="text" name="marca" placeholder="Digite a marca da tinta" class="MarcaCanetas">
+                        <input type="text" name="marca" placeholder="Digite a marca da tinta" class="MarcaTinta">
                         
                         <h2 class="MC">Numeração Pincel</h2>
-                        <input type="text" name="numeracao" placeholder="Digite a numeração do pincel" class="MarcaCanetas">
+                        <input type="text" name="numeracao" placeholder="Digite a numeração do pincel, ex: n20" class="MarcaCanetas">
                         
                         <h2 class="MC">Cor Tinta</h2>                        
                         <input type="text" name="cor" placeholder="Digite a cor da tinta" class="MarcaCanetas">
