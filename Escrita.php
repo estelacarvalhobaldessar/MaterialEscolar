@@ -48,7 +48,7 @@ include_once 'conexao.php';
                                         <th>'.$row["Caneta"].'</th>
                                         <th>'.$row["Cor"].'</th>
                                         <th>
-                                            <a href="">Editar</a>
+                                            <a href="salvaEscrita.php?id='.$row["EscritaID"].'">Editar</a>
                                             <a href="acaoExcluirEscrita.php?id='.$row["EscritaID"].'">Excluir</a>
                                         </th>
                                     </tr>';

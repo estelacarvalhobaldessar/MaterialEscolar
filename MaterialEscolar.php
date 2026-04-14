@@ -50,8 +50,8 @@ include_once 'conexao.php';
                         ?>
                         <tr>
                             <th>ID</th>
-                            <th>EscritaID</th>
-                            <th>PinturaID</th>
+                            <th>Escrita</th>
+                            <th>Pintura</th>
                             <th>Mochila</th>
                             <th>Estojo</th>
                             <th>Garrafa</th>
