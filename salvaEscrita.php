@@ -19,6 +19,7 @@ include_once 'conexao.php';
                         <li><a href="Escrita.php"><h2>Escrita</h2></a></li>
                         <li><a href="MaterialEscolar.php"><h2>Material Escolar</h2></a></li>
                         <li><a href="Pintura.php"><h2>Pintura</h2></a></li>
+                        <li><a href="Escrita.php" class="volta"><h2><</h2></a></li>
                     </ul>
                 </nav>
             </div>

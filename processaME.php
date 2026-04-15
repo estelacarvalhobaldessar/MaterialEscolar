@@ -5,13 +5,13 @@ include_once 'conexao.php';
   $estojo = $_POST['estojo'];
   $garrafa = $_POST['garrafa'];
   $escritaID = $_POST['escrita'];
-  $escritaID = $_POST['pintura']
+  $pinturaID = $_POST['pintura'];
   $id = $_POST['id'];
 
    if ( empty($id)) {
        //INSERT
       $sql = "INSERT INTO materialescolar (EscritaID, PinturaID, Mochila, Estojo, Garrafa) 
-            VALUES ('$escritaID','$escritaID','$mochila','$estojo', '$garrafa');";
+            VALUES ($escritaID,$pinturaID,'$mochila','$estojo', '$garrafa');";
       }else{
           //UPDATE
           $sql = "UPDATE materialescrita 

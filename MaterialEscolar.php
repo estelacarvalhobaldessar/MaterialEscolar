@@ -19,6 +19,7 @@ include_once 'conexao.php';
                         <li><a href="Escrita.php"><h2>Escrita</h2></a></li>
                         <li><a href="MaterialEscolar.php"><h2>Material Escolar</h2></a></li>
                         <li><a href="Pintura.php"><h2>Pintura</h2></a></li>
+                        <li><a href="salvaME.php" class="adiciona"><h2>+</h2></a></li>
                     </ul>
                 </nav>
             </div>
@@ -61,13 +62,13 @@ include_once 'conexao.php';
                             while($row = mysqli_fetch_assoc($result)){  
                             echo '<tr>
                                 <th>'.$row["MaterialEscolarID"].'</th>
-                                <th>'.$row["Caneta"].' - '.$row["Cor"].' - </th>
+                                <th>'.$row["Caneta"].' - '.$row["Cor"].'</th>
                                 <th>'.$row["Tinta"].' - '.$row["CorTinta"].'</th>
                                 <th>'.$row["Mochila"].'</th>
                                 <th>'.$row["Estojo"].'</th>
                                 <th>'.$row["Garrafa"].'</th>
                                 <th>
-                                    <a href="">Editar</a>
+                                    <a href="salvaME.php?id='.$row["MaterialEscolarID"].'">Editar</a>
                                     <a href="acaoExcluirME.php?id='.$row["MaterialEscolarID"].'">Excluir</a></th>
                             </tr>';
                             }

@@ -11,6 +11,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     padding-top: 15px;
+    color: white;
 }
 .caixaMenu{
     height: 70px;
@@ -58,6 +59,7 @@ ul li a:hover {
 .IP{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    color: white;
 }
 .CaixaPintura{
     height: auto;
@@ -73,4 +75,7 @@ table tr th{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     padding-top: 15px;
+}
+.adiciona{
+    margin-left: 650px;
 }

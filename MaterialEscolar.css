@@ -58,6 +58,7 @@ ul li a:hover {
 .ME{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    color: white;
 }
 .CaixaME{
     height: auto;
@@ -73,4 +74,7 @@ table tr th{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     padding-top: 15px;
+}
+.adiciona{
+    margin-left: 650px;
 }
