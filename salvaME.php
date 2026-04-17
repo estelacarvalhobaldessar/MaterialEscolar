@@ -9,8 +9,6 @@ $sql = "SELECT * FROM materialescolar WHERE MaterialEscolarID = ".$id;
 
 $result = mysqli_query($conn, $sql);
 $dados1 = mysqli_fetch_assoc($result);
-$dados2 = mysqli_fetch_assoc($result);
-print_r($dados);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +50,12 @@ print_r($dados);
                             $sql = "SELECT EscritaID,Caneta,Cor FROM escrita;";
                             $result = mysqli_query($conn, $sql);
                             while($row = mysqli_fetch_assoc($result)) {
+                                $selecionado = '';
+                                if(  $row['EscritaID'] ==  $dados1['EscritaID']){
+                                    $selecionado = 'selected';
+                                }
                             ?>
-                                <option value="<?php echo $row['EscritaID'];?>"><?php echo $row['Caneta'].'-'.$row['Cor'];?></option>
+                                <option <?php echo $selecionado;?> value="<?php echo $row['EscritaID'];?>"><?php echo $row['Caneta'].'-'.$row['Cor'];?></option>
                             <?php
                             }
                             ?>
@@ -65,8 +67,12 @@ print_r($dados);
                             $sql = "SELECT PinturaID,Tinta,Pincel,CorTinta FROM pintura;";
                             $result = mysqli_query($conn, $sql);
                             while($row = mysqli_fetch_assoc($result)) {
+                                $selecionado = '';
+                                if ($row['PinturaID'] ==  $dados1['PinturaID']) {
+                                    $selecionado = 'selected';
+                                }
                             ?>
-                                <option value="<?php echo $row['PinturaID'];?>"><?php echo $row['Tinta'].'-'.$row['CorTinta'];?></option>
+                                <option <?php echo $selecionado;?> value="<?php echo $row['PinturaID'];?>"><?php echo $row['Tinta'].'-'.$row['CorTinta'];?></option>
                             <?php
                             }
                             ?>
@@ -74,13 +80,13 @@ print_r($dados);
 
 
                         <h2 class="MC">Marca Mochila</h2>
-                        <input type="text" value="<?php echo $dados1['Mochila'];?>" name="marcaMochila" placeholder="Digite a marca da sua mochila" class="MarcaCanetas">
+                        <input type="text" name="marcaMochila" value="<?php echo $dados1['Mochila'];?>"  placeholder="Digite a marca da sua mochila" class="MarcaCanetas">
 
                         <h2 class="MC">Marca Estojo</h2>
-                        <input type="text" name="estojo" value="<?php echo $dados2['Estojo']?>" placeholder="Digite a marca do seu estojo" class="MarcaCanetas">
+                        <input type="text" name="estojo" value="<?php echo $dados1['Estojo']?>" placeholder="Digite a marca do seu estojo" class="MarcaCanetas">
 
                         <h2 class="MC">Marca Garrafa</h2>
-                        <input type="text" name="garrafa" placeholder="Digite a marca da sua garrafa" class="MarcaCanetas">
+                        <input type="text" name="garrafa" value="<?php echo $dados1['Garrafa']?>"  placeholder="Digite a marca da sua garrafa" class="MarcaCanetas">
 
                         <input type="submit" value="Salvar">
                     </form>

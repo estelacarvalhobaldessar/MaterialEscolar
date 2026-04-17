@@ -52,7 +52,7 @@ include_once 'conexao.php';
                                 <th>'.$row["Pincel"].'</th>
                                 <th>'.$row["CorTinta"].'</th>
                                 <th>
-                                    <a href="">Editar</a>
+                                    <a href="salvaPintura.php?id='.$row["PinturaID"].'">Editar</a>
                                     <a href="acaoExcluirPintura.php?id='.$row["PinturaID"].'">Excluir</a></th>
                             </tr>';
                         }

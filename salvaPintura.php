@@ -1,5 +1,14 @@
 <?php
 include_once 'conexao.php';
+
+$id = $_GET['id'];
+
+// montar o SQL que precisa excluir o dado
+$sql = "SELECT * FROM pintura WHERE PinturaID = ".$id;
+
+$result = mysqli_query($conn, $sql);
+$dados3 = mysqli_fetch_assoc($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +44,13 @@ include_once 'conexao.php';
                         <input type="hidden" name="id">
 
                         <h2 class="MC">Marca Tinta</h2>
-                        <input type="text" name="marca" placeholder="Digite a marca da tinta" class="MarcaTinta">
+                        <input type="text" name="marca" value="<?php echo $dados3['Tinta'];?>" placeholder="Digite a marca da tinta" class="MarcaTinta">
                         
                         <h2 class="MC">Numeração Pincel</h2>
-                        <input type="text" name="numeracao" placeholder="Digite a numeração do pincel, ex: n20" class="MarcaCanetas">
+                        <input type="text" name="numeracao" value="<?php echo $dados3['Pincel'];?>" placeholder="Digite a numeração do pincel, ex: n20" class="MarcaCanetas">
                         
                         <h2 class="MC">Cor Tinta</h2>                        
-                        <input type="text" name="cor" placeholder="Digite a cor da tinta" class="MarcaCanetas">
+                        <input type="text" name="cor" value="<?php echo $dados3['CorTinta'];?>" placeholder="Digite a cor da tinta" class="MarcaCanetas">
                         
                         <input type="submit" value="Salvar">
                     </form>

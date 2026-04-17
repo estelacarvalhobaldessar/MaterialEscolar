@@ -1,5 +1,14 @@
 <?php
 include_once 'conexao.php';
+
+$id = $_GET['id'];
+
+// montar o SQL que precisa excluir o dado
+$sql = "SELECT * FROM escrita WHERE EscritaID = ".$id;
+
+$result = mysqli_query($conn, $sql);
+$dados2 = mysqli_fetch_assoc($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +42,13 @@ include_once 'conexao.php';
                 <div class="cadastro">
                     <form action="./processaEscrita.php" method="post">
                         <input type="hidden" name="id">
+
                         <h2 class="MC">Marca Canetas</h2>
-                        <input type="text" name="marca" placeholder="Digite a marca da caneta" class="MarcaCanetas">
+                        <input type="text" name="marca" value="<?php echo $dados2['Caneta'];?>" placeholder="Digite a marca da caneta" class="MarcaCanetas">
+                        
                         <h2 class="MC">Cor Canetas</h2>
-                        <input type="text" name="cor" placeholder="Digite a cor da caneta" class="MarcaCanetas">
+                        <input type="text" name="cor" value="<?php echo $dados2['Cor'];?>" placeholder="Digite a cor da caneta" class="MarcaCanetas">
+
                         <input type="submit" value="Salvar">
                     </form>
                 </div>
